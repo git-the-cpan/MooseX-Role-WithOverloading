@@ -1,5 +1,5 @@
 package MooseX::Role::WithOverloading;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 # ABSTRACT: Roles which support overloading
@@ -42,12 +42,12 @@ MooseX::Role::WithOverloading - Roles which support overloading
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
     package MyRole;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
     use MooseX::Role::WithOverloading;
 
@@ -63,7 +63,7 @@ our $VERSION = '0.01';
     sub as_string { shift->message }
 
     package MyClass;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
     use Moose;
     use namespace::autoclean;
@@ -71,7 +71,7 @@ our $VERSION = '0.01';
     with 'MyRole';
 
     package main;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
     my $i = MyClass->new( message => 'foobar' );
     print $i; # Prints 'foobar'

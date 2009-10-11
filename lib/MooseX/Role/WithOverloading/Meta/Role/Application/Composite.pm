@@ -1,5 +1,5 @@
 package MooseX::Role::WithOverloading::Meta::Role::Application::Composite;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 # ABSTRACT: Roles which support overloading
@@ -28,7 +28,7 @@ MooseX::Role::WithOverloading::Meta::Role::Application::Composite - Roles which 
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 AUTHORS
 
