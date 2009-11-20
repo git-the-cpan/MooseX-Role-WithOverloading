@@ -1,13 +1,17 @@
-package MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToClass;
+package MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs;
 our $VERSION = '0.03';
 
 
-# ABSTRACT: Roles which support overloading
 
 use Moose::Role;
 use namespace::autoclean;
 
-with 'MooseX::Role::WithOverloading::Meta::Role::Application::Composite';
+if ($] < 5.008009) {
+    after apply => sub {
+        reset_amagic($_[2]);
+    };
+}
+
 
 1;
 
@@ -16,11 +20,13 @@ __END__
 
 =head1 NAME
 
-MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToClass - Roles which support overloading
+MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs
 
 =head1 VERSION
 
 version 0.03
+
+=for Pod::Coverage reset_amagic
 
 =head1 AUTHORS
 

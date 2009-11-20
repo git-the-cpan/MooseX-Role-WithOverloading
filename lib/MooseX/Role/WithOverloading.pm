@@ -1,9 +1,10 @@
 package MooseX::Role::WithOverloading;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 # ABSTRACT: Roles which support overloading
 
+use XSLoader;
 use Moose::Role ();
 use Moose::Exporter;
 use Moose::Util::MetaRole;
@@ -13,6 +14,8 @@ use aliased 'MooseX::Role::WithOverloading::Meta::Role::Application::ToRole';
 use aliased 'MooseX::Role::WithOverloading::Meta::Role::Application::ToInstance';
 
 use namespace::clean;
+
+XSLoader::load(__PACKAGE__, $VERSION);
 
 Moose::Exporter->setup_import_methods(also => 'Moose::Role');
 
@@ -33,7 +36,6 @@ sub init_meta {
 
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -42,12 +44,13 @@ MooseX::Role::WithOverloading - Roles which support overloading
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
     package MyRole;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
+
 
     use MooseX::Role::WithOverloading;
 
@@ -63,7 +66,8 @@ our $VERSION = '0.02';
     sub as_string { shift->message }
 
     package MyClass;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
+
 
     use Moose;
     use namespace::autoclean;
@@ -71,7 +75,9 @@ our $VERSION = '0.02';
     with 'MyRole';
 
     package main;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
+
+
 
     my $i = MyClass->new( message => 'foobar' );
     print $i; # Prints 'foobar'
@@ -83,18 +89,12 @@ defines overloaded operators and allows those operator overloadings to be
 composed into the classes/roles/instances it's compiled to, while plain
 L<Moose::Role>s would lose the overloading.
 
-=begin Pod::Coverage
-
-init_meta
-
-=end Pod::Coverage
-
-
+=for Pod::Coverage init_meta
 
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+Florian Ragwitz <rafl@debian.org>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -103,6 +103,5 @@ This software is copyright (c) 2009 by Florian Ragwitz.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 

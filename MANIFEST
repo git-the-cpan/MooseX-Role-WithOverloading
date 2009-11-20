@@ -4,6 +4,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
+WithOverloading.xs
 dist.ini
 lib/MooseX/Role/WithOverloading.pm
 lib/MooseX/Role/WithOverloading/Meta/Role.pm
@@ -12,6 +13,7 @@ lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite.pm
 lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToClass.pm
 lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToInstance.pm
 lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToRole.pm
+lib/MooseX/Role/WithOverloading/Meta/Role/Application/FixOverloadedRefs.pm
 lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToClass.pm
 lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToInstance.pm
 lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToRole.pm

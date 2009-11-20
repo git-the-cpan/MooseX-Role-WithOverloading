@@ -1,5 +1,5 @@
 package MooseX::Role::WithOverloading::Meta::Role::Application;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 # ABSTRACT: Role application role for Roles which support overloading
@@ -70,7 +70,6 @@ sub apply_overloading {
 1;
 
 __END__
-
 =pod
 
 =head1 NAME
@@ -79,7 +78,7 @@ MooseX::Role::WithOverloading::Meta::Role::Application - Role application role f
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 METHODS
 
@@ -87,26 +86,28 @@ version 0.02
 
 Returns an arrayref of the names of overloaded operations
 
+=cut
 
+=pod
 
 =head2 apply_methods ($role, $other)
 
 Wrapped with an after modifier which calls the C<< ->apply_overloading >>
 method.
 
+=cut
 
+=pod
 
 =head2 apply_overloading ($role, $other)
 
 Does the heavy lifting of applying overload operations to
 a class or role which the role is applied to.
 
-
-
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+Florian Ragwitz <rafl@debian.org>
+Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -115,6 +116,5 @@ This software is copyright (c) 2009 by Florian Ragwitz.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 
