@@ -3,7 +3,7 @@ abstract: 'Roles which support overloading'
 author:
   - 'Florian Ragwitz <rafl@debian.org>'
   - 'Tomas Doran <bobtfish@bobtfish.net>'
-generated_by: 'Dist::Zilla version 1.093160'
+generated_by: 'Dist::Zilla version 1.093400'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -12,8 +12,9 @@ name: MooseX-Role-WithOverloading
 requires:
   Moose: 0.90
   MooseX::Types: 0
+  Test::More: 0.88
   XSLoader: 0
   aliased: 0
   namespace::autoclean: 0.09
   namespace::clean: 0
-version: 0.03
+version: 0.04

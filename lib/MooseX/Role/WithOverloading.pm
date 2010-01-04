@@ -1,7 +1,5 @@
 package MooseX::Role::WithOverloading;
-our $VERSION = '0.03';
-
-
+our $VERSION = '0.04';
 # ABSTRACT: Roles which support overloading
 
 use XSLoader;
@@ -44,14 +42,11 @@ MooseX::Role::WithOverloading - Roles which support overloading
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
     package MyRole;
-our $VERSION = '0.03';
-
-
     use MooseX::Role::WithOverloading;
 
     use overload
@@ -66,18 +61,12 @@ our $VERSION = '0.03';
     sub as_string { shift->message }
 
     package MyClass;
-our $VERSION = '0.03';
-
-
     use Moose;
     use namespace::autoclean;
 
     with 'MyRole';
 
     package main;
-our $VERSION = '0.03';
-
-
 
     my $i = MyClass->new( message => 'foobar' );
     print $i; # Prints 'foobar'
@@ -98,7 +87,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Florian Ragwitz.
+This software is copyright (c) 2010 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

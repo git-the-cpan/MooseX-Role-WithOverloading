@@ -1,7 +1,5 @@
 package MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs;
-our $VERSION = '0.03';
-
-
+our $VERSION = '0.04';
 
 use Moose::Role;
 use namespace::autoclean;
@@ -24,7 +22,7 @@ MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =for Pod::Coverage reset_amagic
 
@@ -35,7 +33,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Florian Ragwitz.
+This software is copyright (c) 2010 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

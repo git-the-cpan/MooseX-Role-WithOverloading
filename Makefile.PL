@@ -2,6 +2,8 @@
 use strict;
 use warnings;
 
+
+
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
@@ -9,11 +11,12 @@ WriteMakefile(
   NAME      => 'MooseX::Role::WithOverloading',
   AUTHOR    => "Florian\ Ragwitz\ \<rafl\@debian\.org\>\,\ Tomas\ Doran\ \<bobtfish\@bobtfish\.net\>",
   ABSTRACT  => "Roles\ which\ support\ overloading",
-  VERSION   => '0.03',
+  VERSION   => '0.04',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {
     "namespace::clean" => '0',
+    "Test::More" => '0.88',
     "XSLoader" => '0',
     "namespace::autoclean" => '0.09',
     "MooseX::Types" => '0',
