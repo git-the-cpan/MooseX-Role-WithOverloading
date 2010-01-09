@@ -1,5 +1,5 @@
 package ClassWithCombiningRole;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use Moose;
 use namespace::autoclean;

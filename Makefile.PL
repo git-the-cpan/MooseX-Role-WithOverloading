@@ -11,7 +11,7 @@ WriteMakefile(
   NAME      => 'MooseX::Role::WithOverloading',
   AUTHOR    => "Florian\ Ragwitz\ \<rafl\@debian\.org\>\,\ Tomas\ Doran\ \<bobtfish\@bobtfish\.net\>",
   ABSTRACT  => "Roles\ which\ support\ overloading",
-  VERSION   => '0.04',
+  VERSION   => '0.05',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

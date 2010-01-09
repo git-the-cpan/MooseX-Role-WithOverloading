@@ -1,5 +1,5 @@
 package MooseX::Role::WithOverloading::Meta::Role::Composite;
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 # ABSTRACT: Role for composite roles which support overloading
 
 use Moose::Role;
@@ -24,6 +24,7 @@ around apply_params => sub {
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -32,7 +33,7 @@ MooseX::Role::WithOverloading::Meta::Role::Composite - Role for composite roles 
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 METHODS
 
@@ -40,10 +41,12 @@ version 0.04
 
 Wrapped method to apply various metaclass roles to aid with role composition.
 
+
+
 =head1 AUTHORS
 
-Florian Ragwitz <rafl@debian.org>
-Tomas Doran <bobtfish@bobtfish.net>
+  Florian Ragwitz <rafl@debian.org>
+  Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -52,5 +55,6 @@ This software is copyright (c) 2010 by Florian Ragwitz.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut
+=cut 
+
 
