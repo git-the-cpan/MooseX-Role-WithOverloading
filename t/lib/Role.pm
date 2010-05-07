@@ -1,5 +1,4 @@
 package Role;
-our $VERSION = '0.05';
 
 use MooseX::Role::WithOverloading;
 use namespace::clean -except => 'meta';

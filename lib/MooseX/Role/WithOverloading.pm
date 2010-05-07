@@ -1,5 +1,10 @@
 package MooseX::Role::WithOverloading;
-our $VERSION = '0.05';
+BEGIN {
+  $MooseX::Role::WithOverloading::AUTHORITY = 'cpan:FLORA';
+}
+BEGIN {
+  $MooseX::Role::WithOverloading::VERSION = '0.06';
+}
 # ABSTRACT: Roles which support overloading
 
 use XSLoader;
@@ -13,7 +18,7 @@ use aliased 'MooseX::Role::WithOverloading::Meta::Role::Application::ToInstance'
 
 use namespace::clean;
 
-XSLoader::load(__PACKAGE__, $VERSION);
+XSLoader::load(__PACKAGE__, our $VERSION);
 
 Moose::Exporter->setup_import_methods(also => 'Moose::Role');
 
@@ -34,16 +39,11 @@ sub init_meta {
 
 
 __END__
-
 =pod
 
 =head1 NAME
 
 MooseX::Role::WithOverloading - Roles which support overloading
-
-=head1 VERSION
-
-version 0.05
 
 =head1 SYNOPSIS
 
@@ -79,13 +79,7 @@ defines overloaded operators and allows those operator overloadings to be
 composed into the classes/roles/instances it's compiled to, while plain
 L<Moose::Role>s would lose the overloading.
 
-=begin Pod::Coverage
-
-init_meta
-
-=end Pod::Coverage
-
-
+=for Pod::Coverage init_meta
 
 =head1 AUTHORS
 
@@ -99,6 +93,5 @@ This software is copyright (c) 2010 by Florian Ragwitz.
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
-=cut 
-
+=cut
 
