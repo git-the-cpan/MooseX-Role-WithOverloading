@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::VERSION = '0.07';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::VERSION = '0.08';
 }
 # ABSTRACT: Fix up magic when applying roles to instances with magic on old perls
 
