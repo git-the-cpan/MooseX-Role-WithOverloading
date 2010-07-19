@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::ToRole::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::ToRole::VERSION = '0.06';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::ToRole::VERSION = '0.07';
 }
 # ABSTRACT: Roles which support overloading
 
@@ -32,14 +32,25 @@ around apply => sub {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 MooseX::Role::WithOverloading::Meta::Role::Application::ToRole - Roles which support overloading
 
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+=over 4
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

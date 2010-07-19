@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.06';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.07';
 }
 # ABSTRACT: Role application role for Roles which support overloading
 
@@ -75,6 +75,8 @@ sub apply_overloading {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 MooseX::Role::WithOverloading::Meta::Role::Application - Role application role for Roles which support overloading
@@ -97,8 +99,17 @@ a class or role which the role is applied to.
 
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+=over 4
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

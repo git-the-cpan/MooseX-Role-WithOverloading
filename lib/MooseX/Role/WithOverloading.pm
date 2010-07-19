@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::VERSION = '0.06';
+  $MooseX::Role::WithOverloading::VERSION = '0.07';
 }
 # ABSTRACT: Roles which support overloading
 
@@ -26,12 +26,14 @@ sub init_meta {
     my ($class, %opts) = @_;
     my $meta = Moose::Role->init_meta(%opts);
 
-    return Moose::Util::MetaRole::apply_metaclass_roles(
-        for_class                           => $meta,
-        metaclass_roles                     => [ MetaRole   ],
-        application_to_class_class_roles    => [ ToClass    ],
-        application_to_role_class_roles     => [ ToRole     ],
-        application_to_instance_class_roles => [ ToInstance ],
+    return Moose::Util::MetaRole::apply_metaroles(
+        for            => $meta,
+        role_metaroles => {
+            role                    => [MetaRole],
+            application_to_class    => [ToClass],
+            application_to_role     => [ToRole],
+            application_to_instance => [ToInstance],
+        },
     );
 }
 
@@ -40,6 +42,8 @@ sub init_meta {
 
 __END__
 =pod
+
+=encoding utf-8
 
 =head1 NAME
 
@@ -83,8 +87,17 @@ L<Moose::Role>s would lose the overloading.
 
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+=over 4
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

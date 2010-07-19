@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Composite::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Composite::VERSION = '0.06';
+  $MooseX::Role::WithOverloading::Meta::Role::Composite::VERSION = '0.07';
 }
 # ABSTRACT: Role for composite roles which support overloading
 
@@ -31,6 +31,8 @@ around apply_params => sub {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 MooseX::Role::WithOverloading::Meta::Role::Composite - Role for composite roles which support overloading
@@ -43,8 +45,17 @@ Wrapped method to apply various metaclass roles to aid with role composition.
 
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+=over 4
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::VERSION = '0.06';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::VERSION = '0.07';
 }
 # ABSTRACT: Fix up magic when applying roles to instances with magic on old perls
 
@@ -22,6 +22,8 @@ if ($] < 5.008009) {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs - Fix up magic when applying roles to instances with magic on old perls
@@ -30,8 +32,17 @@ MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs - Fix 
 
 =head1 AUTHORS
 
-  Florian Ragwitz <rafl@debian.org>
-  Tomas Doran <bobtfish@bobtfish.net>
+=over 4
+
+=item *
+
+Florian Ragwitz <rafl@debian.org>
+
+=item *
+
+Tomas Doran <bobtfish@bobtfish.net>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
