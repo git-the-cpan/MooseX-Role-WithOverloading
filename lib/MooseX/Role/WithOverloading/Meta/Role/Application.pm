@@ -3,11 +3,11 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.08';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.09';
 }
 # ABSTRACT: Role application role for Roles which support overloading
 
-use Moose::Role;
+use Moose::Role 1.15;
 use overload ();
 use MooseX::Types::Moose qw/ArrayRef Str/;
 use namespace::autoclean;
@@ -42,7 +42,7 @@ sub apply_overloading {
     $other->add_package_symbol('$()' => $role->get_package_symbol('$()'))
         if $role->has_package_symbol('$()');
     # register with magic by touching
-    $other->get_package_symbol('%OVERLOAD')->{dummy}++;
+    $other->get_or_add_package_symbol('%OVERLOAD')->{dummy}++;
 
     for my $op (@{ $self->overload_ops }) {
         my $code_sym = '&(' . $op;
@@ -113,7 +113,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Florian Ragwitz.
+This software is copyright (c) 2011 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::VERSION = '0.08';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs::VERSION = '0.09';
 }
 # ABSTRACT: Fix up magic when applying roles to instances with magic on old perls
 
@@ -46,7 +46,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Florian Ragwitz.
+This software is copyright (c) 2011 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
