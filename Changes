@@ -1,3 +1,9 @@
+0.10  Tue, 13 Nov 2012 00:41:00 +0000
+ * Remove use of MooseX::Types to allow Catalyst to work on perl 5.8.5
+   RT#77100, RT#81124
+ * Fix bug causing attributes to get lost if they were added to a role
+   before composing a ::WithOverloading role onto it.
+
 0.09  Mon, 03 Jan 2011 17:37:34 +0100
   * get_package_symbol no longer autovififies - use get_or_add_package_symbol
     instead (doy).

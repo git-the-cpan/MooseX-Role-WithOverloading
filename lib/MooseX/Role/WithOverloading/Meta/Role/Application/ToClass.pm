@@ -2,8 +2,8 @@ package MooseX::Role::WithOverloading::Meta::Role::Application::ToClass;
 BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::ToClass::AUTHORITY = 'cpan:FLORA';
 }
-BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::ToClass::VERSION = '0.09';
+{
+  $MooseX::Role::WithOverloading::Meta::Role::Application::ToClass::VERSION = '0.10';
 }
 # ABSTRACT: Roles which support overloading
 
@@ -39,7 +39,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Florian Ragwitz.
+This software is copyright (c) 2012 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

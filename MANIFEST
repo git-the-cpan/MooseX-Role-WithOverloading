@@ -34,6 +34,7 @@ t/release-eol.t
 t/release-no-tabs.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
+t/remove_attributes_bug.t
 t/to_class.t
 t/to_instance.t
 t/to_role.t

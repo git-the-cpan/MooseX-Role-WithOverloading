@@ -5,7 +5,7 @@
       "Tomas Doran <bobtfish@bobtfish.net>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -17,27 +17,30 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
          "requires" : {
             "Moose" : "0.94",
-            "Moose::Exporter" : 0,
+            "Moose::Exporter" : "0",
             "Moose::Role" : "1.15",
-            "Moose::Util::MetaRole" : 0,
-            "MooseX::Types::Moose" : 0,
-            "XSLoader" : 0,
-            "aliased" : 0,
-            "namespace::autoclean" : 0,
-            "namespace::clean" : 0,
-            "overload" : 0
+            "Moose::Util::MetaRole" : "0",
+            "XSLoader" : "0",
+            "aliased" : "0",
+            "namespace::autoclean" : "0",
+            "namespace::clean" : "0",
+            "overload" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "FindBin" : 0,
-            "Test::More" : "0.88"
+            "FindBin" : "0",
+            "MyRole" : "0",
+            "OverloadingRole" : "0",
+            "Test::More" : "0.88",
+            "strict" : "0",
+            "warnings" : "0"
          }
       }
    },
@@ -47,105 +50,105 @@
          "mailto" : "bug-MooseX-Role-WithOverloading@rt.cpan.org",
          "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Role-WithOverloading"
       },
-      "homepage" : "http://search.cpan.org/dist/MooseX-Role-WithOverloading",
+      "homepage" : "http://metacpan.org/release/MooseX-Role-WithOverloading",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/rafl/moosex-role-withoverloading.git",
          "web" : "http://github.com/rafl/moosex-role-withoverloading"
       }
    },
-   "version" : "0.09",
+   "version" : "0.10",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
             "class" : "Dist::Zilla::Plugin::GatherDir",
             "name" : "@FLORA/@Basic/GatherDir",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::PruneCruft",
             "name" : "@FLORA/@Basic/PruneCruft",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::ManifestSkip",
             "name" : "@FLORA/@Basic/ManifestSkip",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaYAML",
             "name" : "@FLORA/@Basic/MetaYAML",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::License",
             "name" : "@FLORA/@Basic/License",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::Readme",
             "name" : "@FLORA/@Basic/Readme",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExtraTests",
             "name" : "@FLORA/@Basic/ExtraTests",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExecDir",
             "name" : "@FLORA/@Basic/ExecDir",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::ShareDir",
             "name" : "@FLORA/@Basic/ShareDir",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::MakeMaker",
             "name" : "@FLORA/@Basic/MakeMaker",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::Manifest",
             "name" : "@FLORA/@Basic/Manifest",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::TestRelease",
             "name" : "@FLORA/@Basic/TestRelease",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::ConfirmRelease",
             "name" : "@FLORA/@Basic/ConfirmRelease",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::UploadToCPAN",
             "name" : "@FLORA/@Basic/UploadToCPAN",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
             "name" : "@FLORA/MetaConfig",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaJSON",
             "name" : "@FLORA/MetaJSON",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::PkgVersion",
             "name" : "@FLORA/PkgVersion",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
             "name" : "@FLORA/PodSyntaxTests",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::NoTabsTests",
@@ -155,17 +158,17 @@
          {
             "class" : "Dist::Zilla::Plugin::PodCoverageTests",
             "name" : "@FLORA/PodCoverageTests",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaResources",
             "name" : "@FLORA/MetaResources",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::Authority",
             "name" : "@FLORA/Authority",
-            "version" : "1.002"
+            "version" : "1.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::EOLTests",
@@ -180,35 +183,45 @@
          {
             "class" : "Dist::Zilla::Plugin::AutoPrereqs",
             "name" : "@FLORA/AutoPrereqs",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":InstallModules",
-            "version" : "4.200000"
+            "version" : "4.300020"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":IncModules",
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":TestFiles",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":ExecFiles",
-            "version" : "4.200000"
+            "version" : "4.300020"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":ShareFiles",
-            "version" : "4.200000"
+            "version" : "4.300020"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::FinderCode",
+            "name" : ":MainModule",
+            "version" : "4.300020"
          }
       ],
       "zilla" : {
          "class" : "Dist::Zilla::Dist::Builder",
          "config" : {
-            "is_trial" : 0
+            "is_trial" : "0"
          },
-         "version" : "4.200000"
+         "version" : "4.300020"
       }
    },
    "x_authority" : "cpan:FLORA"

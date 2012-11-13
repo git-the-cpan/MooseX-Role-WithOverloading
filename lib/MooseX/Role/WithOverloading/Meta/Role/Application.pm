@@ -2,14 +2,13 @@ package MooseX::Role::WithOverloading::Meta::Role::Application;
 BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::AUTHORITY = 'cpan:FLORA';
 }
-BEGIN {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.09';
+{
+  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.10';
 }
 # ABSTRACT: Role application role for Roles which support overloading
 
 use Moose::Role 1.15;
 use overload ();
-use MooseX::Types::Moose qw/ArrayRef Str/;
 use namespace::autoclean;
 
 requires 'apply_methods';
@@ -17,7 +16,7 @@ requires 'apply_methods';
 
 has overload_ops => (
     is      => 'ro',
-    isa     => ArrayRef[Str],
+    isa     => 'ArrayRef[Str]',
     builder => '_build_overload_ops',
 );
 
@@ -72,6 +71,7 @@ sub apply_overloading {
 
 1;
 
+
 __END__
 =pod
 
@@ -113,7 +113,7 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Florian Ragwitz.
+This software is copyright (c) 2012 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
