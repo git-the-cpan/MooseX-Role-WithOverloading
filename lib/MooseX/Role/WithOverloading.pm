@@ -1,9 +1,11 @@
 package MooseX::Role::WithOverloading;
+# git description: v0.11-10-g15d1881
+
 BEGIN {
   $MooseX::Role::WithOverloading::AUTHORITY = 'cpan:FLORA';
 }
 {
-  $MooseX::Role::WithOverloading::VERSION = '0.11';
+  $MooseX::Role::WithOverloading::VERSION = '0.12';
 }
 # ABSTRACT: Roles which support overloading
 
@@ -39,8 +41,8 @@ sub init_meta {
 
 1;
 
-
 __END__
+
 =pod
 
 =encoding utf-8
@@ -101,10 +103,9 @@ Tomas Doran <bobtfish@bobtfish.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Florian Ragwitz.
+This software is copyright (c) 2013 by Florian Ragwitz.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

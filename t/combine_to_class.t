@@ -1,10 +1,11 @@
 use strict;
 use warnings;
-use Test::More 0.88;
+
+use Test::More tests => 13;
+use Test::NoWarnings 1.04 ':early';
 use overload ();
 
-use FindBin;
-use lib "$FindBin::Bin/lib";
+use lib 't/lib';
 
 BEGIN { use_ok('CombiningClass') }
 
@@ -25,4 +26,3 @@ is($foo->message, 'foo');
 my $str = "${foo}";
 is($str, 'foo');
 
-done_testing;
