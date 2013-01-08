@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Application::AUTHORITY = 'cpan:FLORA';
 }
 {
-  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.12';
+  $MooseX::Role::WithOverloading::Meta::Role::Application::VERSION = '0.13';
 }
 # ABSTRACT: Role application role for Roles which support overloading
 
@@ -40,8 +40,9 @@ sub apply_overloading {
     # fallback value
     $other->add_package_symbol('$()' => $role->get_package_symbol('$()'))
         if $role->has_package_symbol('$()');
-    # register with magic by touching
-    $other->get_or_add_package_symbol('%OVERLOAD')->{dummy}++;
+
+    # register with magic by touching (changes to SVf_AMAGIC removed %OVERLOAD in 5.17.0)
+    $other->get_or_add_package_symbol('%OVERLOAD')->{dummy}++ if $^V < 5.017000;
 
     for my $op (@{ $self->overload_ops }) {
         my $code_sym = '&(' . $op;

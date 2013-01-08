@@ -1,11 +1,11 @@
 package MooseX::Role::WithOverloading;
-# git description: v0.11-10-g15d1881
+# git description: v0.12-2-gf2d211c
 
 BEGIN {
   $MooseX::Role::WithOverloading::AUTHORITY = 'cpan:FLORA';
 }
 {
-  $MooseX::Role::WithOverloading::VERSION = '0.12';
+  $MooseX::Role::WithOverloading::VERSION = '0.13';
 }
 # ABSTRACT: Roles which support overloading
 

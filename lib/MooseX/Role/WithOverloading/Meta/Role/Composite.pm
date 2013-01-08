@@ -3,7 +3,7 @@ BEGIN {
   $MooseX::Role::WithOverloading::Meta::Role::Composite::AUTHORITY = 'cpan:FLORA';
 }
 {
-  $MooseX::Role::WithOverloading::Meta::Role::Composite::VERSION = '0.12';
+  $MooseX::Role::WithOverloading::Meta::Role::Composite::VERSION = '0.13';
 }
 # ABSTRACT: Role for composite roles which support overloading
 

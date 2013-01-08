@@ -19,40 +19,40 @@ name: MooseX-Role-WithOverloading
 provides:
   MooseX::Role::WithOverloading:
     file: lib/MooseX/Role/WithOverloading.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role:
     file: lib/MooseX/Role/WithOverloading/Meta/Role.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToClass:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToClass.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToInstance:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToInstance.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToRole:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToRole.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/FixOverloadedRefs.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::ToClass:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToClass.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::ToInstance:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToInstance.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Application::ToRole:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToRole.pm
-    version: 0.12
+    version: 0.13
   MooseX::Role::WithOverloading::Meta::Role::Composite:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Composite.pm
-    version: 0.12
+    version: 0.13
 requires:
   Moose: 0.94
   Moose::Role: 1.15
@@ -64,10 +64,10 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Role-WithOverloading
   homepage: http://metacpan.org/release/MooseX-Role-WithOverloading
   repository: git://github.com/karenetheridge/moosex-role-withoverloading.git
-version: 0.12
+version: 0.13
 x_Dist_Zilla:
   perl:
-    version: 5.016002
+    version: 5.017006
   plugins:
     -
       class: Dist::Zilla::Plugin::GatherDir
