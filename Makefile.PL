@@ -26,22 +26,21 @@ my %WriteMakefileArgs = (
     "Moose::Util::MetaRole" => 0,
     "XSLoader" => 0,
     "aliased" => 0,
-    "namespace::autoclean" => "0.12",
+    "namespace::autoclean" => "0.16",
     "namespace::clean" => 0,
     "overload" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
-    "File::Spec::Functions" => 0,
-    "List::Util" => 0,
+    "File::Spec" => 0,
     "Test::More" => "0.96",
     "Test::Warnings" => 0,
     "lib" => 0,
+    "namespace::autoclean" => "0.16",
     "strict" => 0,
-    "version" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.14",
+  "VERSION" => "0.15",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -50,8 +49,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "ExtUtils::MakeMaker" => 0,
-  "File::Spec::Functions" => 0,
-  "List::Util" => 0,
+  "File::Spec" => 0,
   "Moose" => "0.94",
   "Moose::Exporter" => 0,
   "Moose::Role" => "1.15",
@@ -61,11 +59,10 @@ my %FallbackPrereqs = (
   "XSLoader" => 0,
   "aliased" => 0,
   "lib" => 0,
-  "namespace::autoclean" => "0.12",
+  "namespace::autoclean" => "0.16",
   "namespace::clean" => 0,
   "overload" => 0,
   "strict" => 0,
-  "version" => 0,
   "warnings" => 0
 );
 

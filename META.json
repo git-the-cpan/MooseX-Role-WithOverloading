@@ -5,7 +5,7 @@
       "Tomas Doran <bobtfish@bobtfish.net>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060",
    "keywords" : [
       "moose",
       "extension",
@@ -36,13 +36,13 @@
       },
       "develop" : {
          "recommends" : {
-            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.067"
+            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.069"
          },
          "requires" : {
             "Dist::Zilla" : "5",
-            "Dist::Zilla::Plugin::ContributorsFromGit" : "0",
             "Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch" : "0.004",
             "Dist::Zilla::Plugin::Git::Commit" : "2.020",
+            "Dist::Zilla::Plugin::Git::Contributors" : "0.003",
             "Dist::Zilla::Plugin::Git::GatherDir" : "2.016",
             "Dist::Zilla::Plugin::GitHub::Update" : "0",
             "Dist::Zilla::Plugin::GithubMeta" : "0",
@@ -53,24 +53,29 @@
             "Dist::Zilla::Plugin::NextRelease" : "4.300018",
             "Dist::Zilla::Plugin::PkgVersion" : "5.010",
             "Dist::Zilla::Plugin::Prereqs" : "0",
+            "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0.142180",
             "Dist::Zilla::Plugin::RunExtraTests" : "0.019",
             "Dist::Zilla::Plugin::Test::CPAN::Changes" : "0.008",
             "Dist::Zilla::Plugin::Test::CheckBreaks" : "0",
+            "Dist::Zilla::Plugin::Test::CleanNamespaces" : "0.004",
             "Dist::Zilla::Plugin::Test::Compile" : "2.039",
             "Dist::Zilla::Plugin::Test::MinimumVersion" : "2.000003",
-            "Dist::Zilla::PluginBundle::Author::ETHER" : "0",
+            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.068",
             "File::Spec" : "0",
             "IO::Handle" : "0",
             "IPC::Open3" : "0",
+            "Moose" : "2.1211",
             "Pod::Coverage::TrustPod" : "0",
             "Pod::Weaver::Section::Contributors" : "0",
             "Test::CPAN::Changes" : "0.19",
             "Test::CPAN::Meta" : "0",
+            "Test::CleanNamespaces" : "0.13",
             "Test::Kwalitee" : "1.12",
             "Test::More" : "0.94",
             "Test::NoTabs" : "0",
             "Test::Pod" : "1.41",
-            "Test::Pod::Coverage" : "1.08"
+            "Test::Pod::Coverage" : "1.08",
+            "Test::Spelling" : "0.12"
          }
       },
       "runtime" : {
@@ -81,7 +86,7 @@
             "Moose::Util::MetaRole" : "0",
             "XSLoader" : "0",
             "aliased" : "0",
-            "namespace::autoclean" : "0.12",
+            "namespace::autoclean" : "0.16",
             "namespace::clean" : "0",
             "overload" : "0",
             "perl" : "5.006"
@@ -89,18 +94,16 @@
       },
       "test" : {
          "recommends" : {
-            "CPAN::Meta" : "0",
-            "CPAN::Meta::Requirements" : "2.120900"
+            "CPAN::Meta" : "2.120900"
          },
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
-            "File::Spec::Functions" : "0",
-            "List::Util" : "0",
+            "File::Spec" : "0",
             "Test::More" : "0.96",
             "Test::Warnings" : "0",
             "lib" : "0",
+            "namespace::autoclean" : "0.16",
             "strict" : "0",
-            "version" : "0",
             "warnings" : "0"
          }
       }
@@ -108,51 +111,51 @@
    "provides" : {
       "MooseX::Role::WithOverloading" : {
          "file" : "lib/MooseX/Role/WithOverloading.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::Composite" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToClass" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToClass.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToInstance" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToInstance.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToRole" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToRole.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/FixOverloadedRefs.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::ToClass" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToClass.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::ToInstance" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToInstance.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Application::ToRole" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToRole.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       },
       "MooseX::Role::WithOverloading::Meta::Role::Composite" : {
          "file" : "lib/MooseX/Role/WithOverloading/Meta/Role/Composite.pm",
-         "version" : "0.14"
+         "version" : "0.15"
       }
    },
    "release_status" : "stable",
@@ -170,10 +173,10 @@
       "x_IRC" : "irc://irc.perl.org/#moose",
       "x_MailingList" : "http://lists.perl.org/list/moose.html"
    },
-   "version" : "0.14",
+   "version" : "0.15",
    "x_Dist_Zilla" : {
       "perl" : {
-         "version" : "5.016003"
+         "version" : "5.021002"
       },
       "plugins" : [
          {
@@ -189,7 +192,7 @@
                }
             },
             "name" : "@Author::ETHER/Git::NextVersion",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::PromptIfStale",
@@ -252,7 +255,7 @@
                }
             },
             "name" : "@Author::ETHER/Git::GatherDir",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaYAML",
@@ -297,18 +300,24 @@
             "class" : "Dist::Zilla::Plugin::Test::Compile",
             "config" : {
                "Dist::Zilla::Plugin::Test::Compile" : {
+                  "bail_out_on_fail" : "1",
+                  "fail_on_warning" : "author",
+                  "fake_home" : "0",
                   "filename" : "xt/author/00-compile.t",
                   "module_finder" : [
                      ":InstallModules"
                   ],
+                  "needs_display" : "0",
+                  "phase" : "develop",
                   "script_finder" : [
                      ":ExecFiles",
                      "@Author::ETHER/Examples"
-                  ]
+                  ],
+                  "skips" : []
                }
             },
             "name" : "@Author::ETHER/Test::Compile",
-            "version" : "2.043"
+            "version" : "2.045"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::NoTabs",
@@ -349,7 +358,7 @@
          {
             "class" : "Dist::Zilla::Plugin::Test::MinimumVersion",
             "name" : "@Author::ETHER/Test::MinimumVersion",
-            "version" : "2.000003"
+            "version" : "2.000005"
          },
          {
             "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
@@ -364,7 +373,7 @@
          {
             "class" : "Dist::Zilla::Plugin::Test::PodSpelling",
             "name" : "@Author::ETHER/Test::PodSpelling",
-            "version" : "2.006007"
+            "version" : "2.006008"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Pod::No404s",
@@ -384,7 +393,7 @@
          {
             "class" : "Dist::Zilla::Plugin::Test::ReportPrereqs",
             "name" : "@Author::ETHER/Test::ReportPrereqs",
-            "version" : "0.013"
+            "version" : "0.018"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Portability",
@@ -498,7 +507,7 @@
                      {
                         "class" : "Pod::Weaver::Section::Contributors",
                         "name" : "Contributors",
-                        "version" : "0.007"
+                        "version" : "0.008"
                      },
                      {
                         "class" : "Pod::Weaver::Plugin::Transformer",
@@ -519,7 +528,7 @@
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
             "name" : "@Author::ETHER/ReadmeAnyFromPod",
-            "version" : "0.141760"
+            "version" : "0.142180"
          },
          {
             "class" : "Dist::Zilla::Plugin::GithubMeta",
@@ -558,7 +567,7 @@
                }
             },
             "name" : "@Author::ETHER/MetaProvides::Package",
-            "version" : "2.000002"
+            "version" : "2.000003"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
@@ -569,6 +578,18 @@
             "class" : "Dist::Zilla::Plugin::Keywords",
             "name" : "@Author::ETHER/Keywords",
             "version" : "0.005"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Git::Contributors",
+            "config" : {
+               "Dist::Zilla::Plugin::Git::Contributors" : {
+                  "include_authors" : "1",
+                  "include_releaser" : "0",
+                  "order_by" : "name"
+               }
+            },
+            "name" : "@Author::ETHER/Git::Contributors",
+            "version" : "0.004"
          },
          {
             "class" : "Dist::Zilla::Plugin::AutoPrereqs",
@@ -609,7 +630,7 @@
          {
             "class" : "Dist::Zilla::Plugin::InstallGuide",
             "name" : "@Author::ETHER/InstallGuide",
-            "version" : "1.200002"
+            "version" : "1.200003"
          },
          {
             "class" : "Dist::Zilla::Plugin::RunExtraTests",
@@ -635,8 +656,15 @@
          },
          {
             "class" : "Dist::Zilla::Plugin::Run::AfterBuild",
+            "config" : {
+               "Dist::Zilla::Plugin::Run::Role::Runner" : {
+                  "run" : [
+                     "bash -c \"if [[ `dirname %d` != .build ]]; then test -e .ackrc && grep -q -- '--ignore-dir=%d' .ackrc || echo '--ignore-dir=%d' >> .ackrc; fi; if [[ %d =~ ^%n-[.[:xdigit:]]+$ ]]; then rm -f .latest; ln -s %d .latest; fi\""
+                  ]
+               }
+            },
             "name" : "@Author::ETHER/Run::AfterBuild",
-            "version" : "0.021"
+            "version" : "0.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::CheckStrictVersion",
@@ -659,7 +687,7 @@
                }
             },
             "name" : "@Author::ETHER/initial check",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts",
@@ -689,7 +717,7 @@
          {
             "class" : "Dist::Zilla::Plugin::CheckPrereqsIndexed",
             "name" : "@Author::ETHER/CheckPrereqsIndexed",
-            "version" : "0.009"
+            "version" : "0.012"
          },
          {
             "class" : "Dist::Zilla::Plugin::TestRelease",
@@ -712,7 +740,7 @@
                }
             },
             "name" : "@Author::ETHER/after tests",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::CheckIssues",
@@ -731,8 +759,15 @@
          },
          {
             "class" : "Dist::Zilla::Plugin::Run::AfterRelease",
-            "name" : "@Author::ETHER/Run::AfterRelease",
-            "version" : "0.021"
+            "config" : {
+               "Dist::Zilla::Plugin::Run::Role::Runner" : {
+                  "run" : [
+                     "rm -f README.md"
+                  ]
+               }
+            },
+            "name" : "@Author::ETHER/remove old READMEs",
+            "version" : "0.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Commit",
@@ -760,7 +795,7 @@
                }
             },
             "name" : "@Author::ETHER/Git::Commit",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
@@ -768,7 +803,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.14",
+                  "tag" : "v0.15",
                   "tag_format" : "v%v%t",
                   "tag_message" : "v%v%t",
                   "time_zone" : "local"
@@ -778,7 +813,7 @@
                }
             },
             "name" : "@Author::ETHER/Git::Tag",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Update",
@@ -799,12 +834,17 @@
                }
             },
             "name" : "@Author::ETHER/Git::Push",
-            "version" : "2.022"
+            "version" : "2.023"
          },
          {
-            "class" : "Dist::Zilla::Plugin::InstallRelease",
-            "name" : "@Author::ETHER/InstallRelease",
-            "version" : "0.008"
+            "class" : "Dist::Zilla::Plugin::Run::AfterRelease",
+            "config" : {
+               "Dist::Zilla::Plugin::Run::Role::Runner" : {
+                  "run" : "REDACTED"
+               }
+            },
+            "name" : "@Author::ETHER/install release",
+            "version" : "0.023"
          },
          {
             "class" : "Dist::Zilla::Plugin::ConfirmRelease",
@@ -839,14 +879,25 @@
             "version" : "5.020"
          },
          {
-            "class" : "Dist::Zilla::Plugin::ContributorsFromGit",
-            "name" : "ContributorsFromGit",
-            "version" : "0.006"
-         },
-         {
             "class" : "Dist::Zilla::Plugin::Test::CheckBreaks",
             "name" : "Test::CheckBreaks",
             "version" : "0.009"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "develop",
+                  "type" : "requires"
+               }
+            },
+            "name" : "DevelopRequires",
+            "version" : "5.020"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Test::CleanNamespaces",
+            "name" : "Test::CleanNamespaces",
+            "version" : "0.004"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
@@ -887,6 +938,11 @@
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":NoFiles",
             "version" : "5.020"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::VerifyPhases",
+            "name" : "@Author::ETHER/PHASE VERIFICATION",
+            "version" : "0.003"
          }
       ],
       "zilla" : {
@@ -900,9 +956,10 @@
    "x_authority" : "cpan:FLORA",
    "x_contributors" : [
       "Dave Rolsky <autarch@urth.org>",
+      "Florian Ragwitz <rafl@debian.org>",
       "Jesse Luehrs <doy@tozt.net>",
-      "Karen Etheridge <ether@cpan.org>",
-      "Tomas Doran (t0m) <t0m@state51.co.uk>"
+      "Tomas Doran (t0m) <t0m@state51.co.uk>",
+      "Tomas Doran <bobtfish@bobtfish.net>"
    ]
 }
 

@@ -5,18 +5,17 @@ author:
   - 'Tomas Doran <bobtfish@bobtfish.net>'
 build_requires:
   ExtUtils::MakeMaker: '0'
-  File::Spec::Functions: '0'
-  List::Util: '0'
+  File::Spec: '0'
   Test::More: '0.96'
   Test::Warnings: '0'
   lib: '0'
+  namespace::autoclean: '0.16'
   strict: '0'
-  version: '0'
   warnings: '0'
 configure_requires:
   ExtUtils::MakeMaker: '0'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142060'
 keywords:
   - moose
   - extension
@@ -36,40 +35,40 @@ no_index:
 provides:
   MooseX::Role::WithOverloading:
     file: lib/MooseX/Role/WithOverloading.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role:
     file: lib/MooseX/Role/WithOverloading/Meta/Role.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToClass:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToClass.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToInstance:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToInstance.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::Composite::ToRole:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/Composite/ToRole.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::FixOverloadedRefs:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/FixOverloadedRefs.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::ToClass:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToClass.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::ToInstance:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToInstance.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Application::ToRole:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Application/ToRole.pm
-    version: '0.14'
+    version: '0.15'
   MooseX::Role::WithOverloading::Meta::Role::Composite:
     file: lib/MooseX/Role/WithOverloading/Meta/Role/Composite.pm
-    version: '0.14'
+    version: '0.15'
 requires:
   Moose: '0.94'
   Moose::Exporter: '0'
@@ -77,7 +76,7 @@ requires:
   Moose::Util::MetaRole: '0'
   XSLoader: '0'
   aliased: '0'
-  namespace::autoclean: '0.12'
+  namespace::autoclean: '0.16'
   namespace::clean: '0'
   overload: '0'
   perl: '5.006'
@@ -87,10 +86,10 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Role-WithOverloading
   homepage: https://github.com/moose/MooseX-Role-WithOverloading
   repository: https://github.com/moose/MooseX-Role-WithOverloading.git
-version: '0.14'
+version: '0.15'
 x_Dist_Zilla:
   perl:
-    version: '5.016003'
+    version: '5.021002'
   plugins:
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
@@ -102,7 +101,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::NextVersion'
-      version: '2.022'
+      version: '2.023'
     -
       class: Dist::Zilla::Plugin::PromptIfStale
       config:
@@ -150,7 +149,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::GatherDir'
-      version: '2.022'
+      version: '2.023'
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@Author::ETHER/MetaYAML'
@@ -186,14 +185,20 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Test::Compile
       config:
         Dist::Zilla::Plugin::Test::Compile:
+          bail_out_on_fail: '1'
+          fail_on_warning: author
+          fake_home: '0'
           filename: xt/author/00-compile.t
           module_finder:
             - ':InstallModules'
+          needs_display: '0'
+          phase: develop
           script_finder:
             - ':ExecFiles'
             - '@Author::ETHER/Examples'
+          skips: []
       name: '@Author::ETHER/Test::Compile'
-      version: '2.043'
+      version: '2.045'
     -
       class: Dist::Zilla::Plugin::Test::NoTabs
       config:
@@ -225,7 +230,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::MinimumVersion
       name: '@Author::ETHER/Test::MinimumVersion'
-      version: '2.000003'
+      version: '2.000005'
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@Author::ETHER/PodSyntaxTests'
@@ -237,7 +242,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::PodSpelling
       name: '@Author::ETHER/Test::PodSpelling'
-      version: '2.006007'
+      version: '2.006008'
     -
       class: Dist::Zilla::Plugin::Test::Pod::No404s
       name: '@Author::ETHER/Test::Pod::No404s'
@@ -253,7 +258,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Test::ReportPrereqs
       name: '@Author::ETHER/Test::ReportPrereqs'
-      version: '0.013'
+      version: '0.018'
     -
       class: Dist::Zilla::Plugin::Test::Portability
       name: '@Author::ETHER/Test::Portability'
@@ -345,7 +350,7 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::Contributors
               name: Contributors
-              version: '0.007'
+              version: '0.008'
             -
               class: Pod::Weaver::Plugin::Transformer
               name: -Transformer
@@ -359,7 +364,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
       name: '@Author::ETHER/ReadmeAnyFromPod'
-      version: '0.141760'
+      version: '0.142180'
     -
       class: Dist::Zilla::Plugin::GithubMeta
       name: '@Author::ETHER/GithubMeta'
@@ -388,7 +393,7 @@ x_Dist_Zilla:
           inherit_version: '1'
           meta_noindex: '1'
       name: '@Author::ETHER/MetaProvides::Package'
-      version: '2.000002'
+      version: '2.000003'
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Author::ETHER/MetaConfig'
@@ -397,6 +402,15 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Keywords
       name: '@Author::ETHER/Keywords'
       version: '0.005'
+    -
+      class: Dist::Zilla::Plugin::Git::Contributors
+      config:
+        Dist::Zilla::Plugin::Git::Contributors:
+          include_authors: '1'
+          include_releaser: '0'
+          order_by: name
+      name: '@Author::ETHER/Git::Contributors'
+      version: '0.004'
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@Author::ETHER/AutoPrereqs'
@@ -427,7 +441,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::InstallGuide
       name: '@Author::ETHER/InstallGuide'
-      version: '1.200002'
+      version: '1.200003'
     -
       class: Dist::Zilla::Plugin::RunExtraTests
       config:
@@ -445,8 +459,12 @@ x_Dist_Zilla:
       version: '0.007'
     -
       class: Dist::Zilla::Plugin::Run::AfterBuild
+      config:
+        Dist::Zilla::Plugin::Run::Role::Runner:
+          run:
+            - "bash -c \"if [[ `dirname %d` != .build ]]; then test -e .ackrc && grep -q -- '--ignore-dir=%d' .ackrc || echo '--ignore-dir=%d' >> .ackrc; fi; if [[ %d =~ ^%n-[.[:xdigit:]]+$ ]]; then rm -f .latest; ln -s %d .latest; fi\""
       name: '@Author::ETHER/Run::AfterBuild'
-      version: '0.021'
+      version: '0.023'
     -
       class: Dist::Zilla::Plugin::CheckStrictVersion
       name: '@Author::ETHER/CheckStrictVersion'
@@ -463,7 +481,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/initial check'
-      version: '2.022'
+      version: '2.023'
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts
       config:
@@ -485,7 +503,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CheckPrereqsIndexed
       name: '@Author::ETHER/CheckPrereqsIndexed'
-      version: '0.009'
+      version: '0.012'
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: '@Author::ETHER/TestRelease'
@@ -502,7 +520,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/after tests'
-      version: '2.022'
+      version: '2.023'
     -
       class: Dist::Zilla::Plugin::CheckIssues
       name: '@Author::ETHER/CheckIssues'
@@ -517,8 +535,12 @@ x_Dist_Zilla:
       version: '0.001'
     -
       class: Dist::Zilla::Plugin::Run::AfterRelease
-      name: '@Author::ETHER/Run::AfterRelease'
-      version: '0.021'
+      config:
+        Dist::Zilla::Plugin::Run::Role::Runner:
+          run:
+            - 'rm -f README.md'
+      name: '@Author::ETHER/remove old READMEs'
+      version: '0.023'
     -
       class: Dist::Zilla::Plugin::Git::Commit
       config:
@@ -539,21 +561,21 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Commit'
-      version: '2.022'
+      version: '2.023'
     -
       class: Dist::Zilla::Plugin::Git::Tag
       config:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: v0.14
+          tag: v0.15
           tag_format: v%v%t
           tag_message: v%v%t
           time_zone: local
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Tag'
-      version: '2.022'
+      version: '2.023'
     -
       class: Dist::Zilla::Plugin::GitHub::Update
       name: '@Author::ETHER/GitHub::Update'
@@ -568,11 +590,14 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Push'
-      version: '2.022'
+      version: '2.023'
     -
-      class: Dist::Zilla::Plugin::InstallRelease
-      name: '@Author::ETHER/InstallRelease'
-      version: '0.008'
+      class: Dist::Zilla::Plugin::Run::AfterRelease
+      config:
+        Dist::Zilla::Plugin::Run::Role::Runner:
+          run: REDACTED
+      name: '@Author::ETHER/install release'
+      version: '0.023'
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Author::ETHER/ConfirmRelease'
@@ -598,13 +623,21 @@ x_Dist_Zilla:
       name: MetaResources
       version: '5.020'
     -
-      class: Dist::Zilla::Plugin::ContributorsFromGit
-      name: ContributorsFromGit
-      version: '0.006'
-    -
       class: Dist::Zilla::Plugin::Test::CheckBreaks
       name: Test::CheckBreaks
       version: '0.009'
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: develop
+          type: requires
+      name: DevelopRequires
+      version: '5.020'
+    -
+      class: Dist::Zilla::Plugin::Test::CleanNamespaces
+      name: Test::CleanNamespaces
+      version: '0.004'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
@@ -637,6 +670,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::FinderCode
       name: ':NoFiles'
       version: '5.020'
+    -
+      class: Dist::Zilla::Plugin::VerifyPhases
+      name: '@Author::ETHER/PHASE VERIFICATION'
+      version: '0.003'
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
@@ -645,6 +682,7 @@ x_Dist_Zilla:
 x_authority: cpan:FLORA
 x_contributors:
   - 'Dave Rolsky <autarch@urth.org>'
+  - 'Florian Ragwitz <rafl@debian.org>'
   - 'Jesse Luehrs <doy@tozt.net>'
-  - 'Karen Etheridge <ether@cpan.org>'
   - 'Tomas Doran (t0m) <t0m@state51.co.uk>'
+  - 'Tomas Doran <bobtfish@bobtfish.net>'
