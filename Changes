@@ -1,5 +1,9 @@
 Revision history for MooseX-Role-WithOverloading
 
+0.16      2014-11-16 03:50:29Z
+          - fix tests that failed due to an interaction between aliased.pm and
+            perl 5.21.6
+
 0.15      2014-08-12 05:16:31Z
           - forward-compat mode added for Moose 2.1300, which cores all of
             this distribution's functionality

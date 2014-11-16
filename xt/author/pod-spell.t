@@ -16,6 +16,9 @@ rafl
 Tomas
 Doran
 bobtfish
+Karen
+Etheridge
+ether
 Dave
 Rolsky
 autarch
@@ -29,8 +32,8 @@ Role
 WithOverloading
 Meta
 Application
-ToRole
 Composite
+ToClass
+ToRole
 ToInstance
 FixOverloadedRefs
-ToClass
